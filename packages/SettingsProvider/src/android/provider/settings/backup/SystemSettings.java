@@ -145,5 +145,6 @@ public class SystemSettings {
         Settings.System.ENABLE_FLOATING_ROTATION_BUTTON,
         Settings.System.STATUSBAR_CLOCK_POSITION,
         Settings.System.LOCKSCREEN_SMALL_CLOCK,
+	Settings.System.THREE_FINGER_GESTURE,
     };
 }
