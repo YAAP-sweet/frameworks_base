@@ -5458,6 +5458,13 @@ public final class Settings {
         public static final String VOLUME_BUTTON_MUSIC_CONTROL = "volume_button_music_control";
 
         /**
+         * Whether to display 4G icon instead LTE
+         * @hide
+         */
+	@Readable
+        public static final String SHOW_FOURG_ICON = "show_fourg_icon";
+
+	/**
          * Time required for volume button music control to be pressed
          * @hide
          */
