@@ -146,5 +146,9 @@ public class SystemSettings {
         Settings.System.STATUSBAR_CLOCK_POSITION,
         Settings.System.LOCKSCREEN_SMALL_CLOCK,
         Settings.System.FULLSCREEN_GESTURES,
+        Settings.System.ARTWORK_MEDIA_BACKGROUND,
+        Settings.System.ARTWORK_MEDIA_BACKGROUND_ENABLE_BLUR,
+        Settings.System.ARTWORK_MEDIA_BACKGROUND_BLUR_RADIUS,
+        Settings.System.ARTWORK_MEDIA_BACKGROUND_ALPHA,
     };
 }
