@@ -5714,6 +5714,12 @@ public final class Settings {
         @Readable
         public static final String STATUSBAR_CLOCK_POSITION = "statusbar_clock_position";
 
+	/**
+	 * Size of gesture bar radius.
+	 * @hide
+	 */
+        public static final String GESTURE_NAVBAR_RADIUS = "gesture_navbar_radius";
+
         /**
          * Whether to force small clock on keyguard
          * @hide
