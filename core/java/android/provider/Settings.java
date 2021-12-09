@@ -5221,6 +5221,20 @@ public final class Settings {
         public static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
 
         /**
+         * Whether to show VoLTE icon or not
+         * @hide
+         */
+	@Readable
+        public static final String SHOW_VOLTE_ICON = "show_volte_icon";
+
+        /**
+         * VoLTE icon style
+         * @hide
+         */
+	@Readable
+        public static final String VOLTE_ICON_STYLE = "volte_icon_style";
+
+	/**
          * Whether to disable showing arrows in statusbar network traffic indicators
          * @hide
          */
@@ -5470,13 +5484,6 @@ public final class Settings {
          */
         @Readable
         public static final String VOLUME_BUTTON_MUSIC_CONTROL_DELAY = "volume_button_music_control_delay";
-
-        /**
-         * Whether to show VoLTE icon or not
-         * @hide
-         */
-	@Readable
-        public static final String SHOW_VOLTE_ICON = "volte_icon";
 
         /**
          * Whether to enable advanced reboot
@@ -5825,6 +5832,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(FLASHLIGHT_ON_CALL);
             PRIVATE_SETTINGS.add(FLASHLIGHT_ON_CALL_IGNORE_DND);
             PRIVATE_SETTINGS.add(FLASHLIGHT_ON_CALL_RATE);
+            PRIVATE_SETTINGS.add(VOLTE_ICON_STYLE);
         }
 
         /**
