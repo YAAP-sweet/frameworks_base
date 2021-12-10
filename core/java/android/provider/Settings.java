@@ -5234,6 +5234,12 @@ public final class Settings {
 	@Readable
         public static final String VOLTE_ICON_STYLE = "volte_icon_style";
 
+        /**
+         * Whether to show VoWiFi icon or not
+         * @hide
+         */
+        public static final String VOWIFI_ICON = "vowifi_icon";
+
 	/**
          * Whether to disable showing arrows in statusbar network traffic indicators
          * @hide
