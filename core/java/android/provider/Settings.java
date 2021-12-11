@@ -5206,6 +5206,13 @@ public final class Settings {
         @Readable
         public static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
 
+	/**
+	 * qs clock picker
+	 * @hide
+	 */
+	@Readable
+	public static final String QS_CLOCK_PICKER = "qs_clock_picker";
+
         /**
     	 * What to show in network traffic indicator in statusbar
     	 * @hide
