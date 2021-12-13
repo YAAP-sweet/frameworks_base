@@ -66,6 +66,8 @@ LOCAL_REQUIRED_MODULES := \
     IconPackOOSLauncherOverlay \
     IconPackOOSSettingsOverlay \
     IconPackOOSThemePickerOverlay \
+    IconPackAcherusAndroidOverlay \
+    IconPackAcherusSystemUIOverlay \
     NavigationBarMode3ButtonOverlay \
     NavigationBarModeGesturalOverlay \
     NavigationBarModeGesturalOverlayNarrowBack \
