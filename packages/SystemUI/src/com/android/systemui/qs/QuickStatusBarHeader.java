@@ -94,6 +94,8 @@ public class QuickStatusBarHeader extends FrameLayout implements
     private final Handler mHandler = new Handler();
     private LinearLayout mQsClock1;
     private LinearLayout mQsClock2;
+    private LinearLayout mQsClock3;
+    private LinearLayout mQsClock4;
 
     private BatteryMeterView mBatteryRemainingIcon;
     private StatusIconContainer mIconContainer;
@@ -182,6 +184,8 @@ public class QuickStatusBarHeader extends FrameLayout implements
         mBatteryRemainingIcon = findViewById(R.id.batteryRemainingIcon);
  	mQsClock1 = findViewById(R.id.sparkqs1);
         mQsClock2 = findViewById(R.id.sparkqs2);
+ 	mQsClock3 = findViewById(R.id.newqs3);
+        mQsClock4 = findViewById(R.id.newqs4);
 
         mSettingsObserver.observe();
         updateSettings();
@@ -358,11 +362,31 @@ public class QuickStatusBarHeader extends FrameLayout implements
         if (qsclock == 0) {
            mQsClock1.setVisibility(View.VISIBLE);
            mQsClock2.setVisibility(View.GONE);
+           mQsClock3.setVisibility(View.GONE);
+           mQsClock4.setVisibility(View.GONE);
            if (mDatePrivacyView != null) {
            mDatePrivacyView.setVisibility(View.GONE);
            }
         } else if (qsclock == 1) {
            mQsClock2.setVisibility(View.VISIBLE);
+           mQsClock1.setVisibility(View.GONE);
+           mQsClock3.setVisibility(View.GONE);
+           mQsClock4.setVisibility(View.GONE);
+           if (mDatePrivacyView != null) {
+           mDatePrivacyView.setVisibility(View.GONE);
+           }
+        } else if (qsclock == 2) {
+           mQsClock3.setVisibility(View.VISIBLE);
+           mQsClock2.setVisibility(View.GONE);
+           mQsClock1.setVisibility(View.GONE);
+           mQsClock4.setVisibility(View.GONE);
+           if (mDatePrivacyView != null) {
+           mDatePrivacyView.setVisibility(View.GONE);
+           }
+        } else if (qsclock == 3) {
+           mQsClock4.setVisibility(View.VISIBLE);
+           mQsClock3.setVisibility(View.GONE);
+           mQsClock2.setVisibility(View.GONE);
            mQsClock1.setVisibility(View.GONE);
            if (mDatePrivacyView != null) {
            mDatePrivacyView.setVisibility(View.GONE);
