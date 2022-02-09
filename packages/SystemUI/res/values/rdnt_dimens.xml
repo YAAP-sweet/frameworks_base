@@ -24,4 +24,7 @@
     <dimen name="navigation_home_handle_width_medium">110dp</dimen>
     <dimen name="navigation_home_handle_width_long">140dp</dimen>
 
+    <!-- Dialog margin -->
+    <dimen name="rdnt_margin_dialog">12dp</dimen>
+
 </resources>
