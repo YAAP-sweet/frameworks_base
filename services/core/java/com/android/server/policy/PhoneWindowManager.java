@@ -639,9 +639,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
     private boolean mVolumeMusicControlActive;
     private boolean mVolumeMusicControl;
 
-    private boolean mThreeFingerGestureEnabled;
-    private ThreeFingerGestureListener mThreeFingerGestureListener;
-
     private class PolicyHandler extends Handler {
         @Override
         public void handleMessage(Message msg) {
@@ -778,9 +775,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.VOLUME_BUTTON_MUSIC_CONTROL), false, this,
-                    UserHandle.USER_ALL);
-            resolver.registerContentObserver(Settings.System.getUriFor(
-                    Settings.System.THREE_FINGER_GESTURE), false, this,
                     UserHandle.USER_ALL);
             updateSettings();
         }
@@ -1711,8 +1705,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         }
 
         mHandler = new PolicyHandler();
-        mThreeFingerGestureListener = new ThreeFingerGestureListener(context,
-            () -> mHandler.post(mScreenshotRunnable) /** callback */);
         mWakeGestureListener = new MyWakeGestureListener(mContext, mHandler);
         mSettingsObserver = new SettingsObserver(mHandler);
         mSettingsObserver.observe();
@@ -2138,16 +2130,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         }
     }
 
-    private void enableSwipeThreeFingerGesture(boolean enable) {
-        if (enable == mThreeFingerGestureEnabled) return;
-        mThreeFingerGestureEnabled = enable;
-        if (mThreeFingerGestureEnabled) {
-            mWindowManagerFuncs.registerPointerEventListener(mThreeFingerGestureListener, DEFAULT_DISPLAY);
-        } else {
-            mWindowManagerFuncs.unregisterPointerEventListener(mThreeFingerGestureListener, DEFAULT_DISPLAY);
-        }
-    }
-
     /**
      * Read values from config.xml that may be overridden depending on
      * the configuration of the device.
@@ -2209,9 +2191,6 @@ public class PhoneWindowManager implements WindowManagerPolicy {
             mVolumeMusicControl = Settings.System.getIntForUser(resolver,
                     Settings.System.VOLUME_BUTTON_MUSIC_CONTROL, 0,
                     UserHandle.USER_CURRENT) != 0;
-            // Three Finger Gesture
-            enableSwipeThreeFingerGesture(Settings.System.getIntForUser(resolver,
-                    Settings.System.THREE_FINGER_GESTURE, 0, UserHandle.USER_CURRENT) == 1);
 
             // Configure wake gesture.
             boolean wakeGestureEnabledSetting = Settings.Secure.getIntForUser(resolver,

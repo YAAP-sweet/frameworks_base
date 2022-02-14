@@ -60,7 +60,4 @@
     <!-- Max visible notification icons -->
     <integer name="config_maxVisibleNotificationIcons">4</integer>
     <integer name="config_maxVisibleNotificationIconsWhenDark">5</integer>
-
-    <!-- Minimum distance to swipe down with three fingers to trigger screenshot action -->
-    <integer name="config_threeFingerSwipeDistance">350</integer>
 </resources>

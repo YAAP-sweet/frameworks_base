@@ -278,6 +278,5 @@ public class SystemSettingsValidators {
         VALIDATORS.put(System.ENABLE_FLOATING_ROTATION_BUTTON, BOOLEAN_VALIDATOR);
         VALIDATORS.put(System.STATUSBAR_CLOCK_POSITION, new InclusiveIntegerRangeValidator(0, 2));
         VALIDATORS.put(System.LOCKSCREEN_SMALL_CLOCK, BOOLEAN_VALIDATOR);
-        VALIDATORS.put(System.THREE_FINGER_GESTURE, BOOLEAN_VALIDATOR);
     }
 }
